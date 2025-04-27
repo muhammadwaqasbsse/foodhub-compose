@@ -144,7 +144,7 @@ fun SharedTransitionScope.RestaurantDetails(
             text = title,
             style = MaterialTheme.typography.titleLarge,
             modifier = Modifier.sharedElement(
-                state = rememberSharedContentState(key = "title/${restaurantID}"),
+                rememberSharedContentState(key = "title/${restaurantID}"),
                 animatedVisibilityScope
             )
         )
@@ -202,7 +202,7 @@ fun SharedTransitionScope.RestaurantDetailsHeader(
                 .fillMaxWidth()
                 .height(200.dp)
                 .sharedElement(
-                    state = rememberSharedContentState(key = "image/${restaurantID}"),
+                    rememberSharedContentState(key = "image/${restaurantID}"),
                     animatedVisibilityScope
                 )
                 .clip(

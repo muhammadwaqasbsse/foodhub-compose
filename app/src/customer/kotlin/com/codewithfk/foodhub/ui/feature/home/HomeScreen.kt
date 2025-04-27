@@ -164,7 +164,7 @@ fun SharedTransitionScope.RestaurantItem(
                     .fillMaxSize()
                     .weight(1f)
                     .sharedElement(
-                        state = rememberSharedContentState(key = "image/${restaurant.id}"),
+                        rememberSharedContentState(key = "image/${restaurant.id}"),
                         animatedVisibilityScope = animatedVisibilityScope
                     ),
                 contentScale = androidx.compose.ui.layout.ContentScale.Crop
@@ -179,7 +179,7 @@ fun SharedTransitionScope.RestaurantItem(
                     style = Typography.titleMedium,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.sharedElement(
-                        state = rememberSharedContentState(key = "title/${restaurant.id}"),
+                        rememberSharedContentState(key = "title/${restaurant.id}"),
                         animatedVisibilityScope = animatedVisibilityScope
                     )
                 )

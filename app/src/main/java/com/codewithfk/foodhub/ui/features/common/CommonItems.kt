@@ -70,7 +70,7 @@ fun SharedTransitionScope.FoodItemView(
                     .fillMaxSize()
                     .clip(RoundedCornerShape(16.dp))
                     .sharedElement(
-                        state = rememberSharedContentState(key = "image/${footItem.id}"),
+                        rememberSharedContentState(key = "image/${footItem.id}"),
                         animatedVisibilityScope
                     ),
                 contentScale = ContentScale.Crop,
@@ -130,7 +130,7 @@ fun SharedTransitionScope.FoodItemView(
             Text(
                 text = footItem.name, style = MaterialTheme.typography.bodyMedium, maxLines = 1,
                 modifier = Modifier.sharedElement(
-                    state = rememberSharedContentState(key = "title/${footItem.id}"),
+                    rememberSharedContentState(key = "title/${footItem.id}"),
                     animatedVisibilityScope
                 )
             )
